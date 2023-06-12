@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <img class="macbookimg" src="/assets/img/Macbook-PNG-Pic.png" alt="">
+            <h3>Macbook pro retina 2023</h3>
+            <input id="inputCantidad" type="number" placeholder="Cantidad">
+            <input id="inputColor" type="text" placeholder="Color">
+            <p>Precio <span id="precio">1500000</span></p>
+           <button
+            onclick="
+            cantidad = document.querySelector('#inputCantidad').value
+            precio = document.getElementById('precio').textContent
+            total = cantidad * precio
+            color = document.querySelector('#inputColor').value
+            document.querySelector('.precioTotal').innerHTML= total
+            document.querySelector('.cantidadFinal').innerHTML= cantidad
+            document.querySelector('.colorFinal').style.backgroundColor = color
+
+            "
+            >
+            Calcular Total </button>
+        </main>
+        <section>
+            <h3>Total: $<span class="precioTotal">0</span></h3>
+            <h3>Cantidad: <span class="cantidadFinal">0</span> </h3>
+            <h3>Color: <span class="colorFinal"></span></h3>
+        </section>
+    </div>
+</body>
+</html>
